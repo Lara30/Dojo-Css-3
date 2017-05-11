@@ -32,11 +32,14 @@
     border-right:
 	  display:block;
     text-decoration: none;
+    margin-left: -9px;
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
-    padding-top: 5px;
+    padding-top: 10px;
+    color: black;
   }
+
   nav li{
     padding-right: 40px;
     font-family: "Josefin Sans";
@@ -44,15 +47,17 @@
     font-size: 15px;
     line-height:30px;
     color:black;
+    padding-left: -15px;
   }
   nav li:hover .sub-menu{
     display: block;
   }
+
   .sub-menu{
     position:absolute;
     display:none;
     margin-left: -40px;
-    padding-top: 10px;
+    padding-top: 0px;
   }
 /****************************
   ===== Main Section =====
@@ -75,6 +80,7 @@
   }
 
   h2 {
+    font-family: "Josefin Sans";
     width: 50%;
   }
   .welcome-title hr{
