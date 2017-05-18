@@ -1,10 +1,13 @@
-<<<<<<< HEAD
+
 /****************************
       ===== All =====
 ****************************/
   *{
     /*border: 1px dotted;*/
     letter-spacing: 3px;
+  }
+  body {
+    margin: 0;
   }
 /****************************
      ===== Header =====
@@ -29,7 +32,7 @@
   nav ul a{
     border: 1px solid black;
     border-top: none;
-    border-right:
+    border-right;
 	  display:block;
     text-decoration: none;
     margin-left: -9px;
@@ -152,10 +155,48 @@
     letter-spacing: 1px;
     border-style: none;
   }
+
+  /**** === Page 4 === ****/
+
+  .json {
+    text-align: center;
+    height: 275px;
+  }
+  #zone {
+    border: 1px  solid black;
+    margin:  auto;
+    width: 30%;
+
+  }
+  ul#zone {
+    width: 30%;
+    margin: auto;
+    padding: 0;
+  }
+  #lecture {
+    background-color: #e1b3a2;
+    width : 30%;
+    margin: auto;
+    font-size: 30px;
+    padding-bottom: 30px;
+    font-family: "Josefin Sans";
+    border: 1px solid black;
+  }
+  h1 {
+    font-weight: 600;
+    font-family: "Josefin Sans";
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    border-bottom: solid grey 1px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+  }
 /****************************
      ===== Footer =====
 ****************************/
   footer{
+    margin-top: 100px;
     background-color: #F7F7F7;
     padding-top: 50px;
   }
@@ -178,13 +219,15 @@
     font-size: 15px;
     font-weight: bold;
   }
-  .email{
+  .email, .name{
     margin:10px 0 10px 10px;
   }
+
   p, .email{
     letter-spacing: 1px;
   }
   .submit-button{
+    margin-top: 10px;
     background-color: black;
     color:white;
     height:35px;
@@ -201,22 +244,23 @@
   }
   input{
     border:none;
+    height: 30px;
+    padding-left: 10px;
   }
 
-.email {
-    border-left: solid 1px black;
-    border-right: solid 1px black;
-  }
+
 
   form{
+
     border:1px solid grey;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: left;
     padding: 5px;
     border-radius: 4px;
     border-color: #e5e5e5;
-    background-color: white;
+    margin-top: 10px;
   }
   hr{
     background-color: black;

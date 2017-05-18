@@ -1,43 +1,45 @@
-<!DOCTYPE html>
-<html lang="fr">
-     <head>
-       <title>Page 4 PHP</title>
-       <meta charset="utf-8">
-       <link href="style.css" rel="stylesheet" type=text/css>
-    </head>
-    <body>
+<?php include("header.html"); ?>
 
-      <p>Votre prénom est
-        <?php
-        if (isset($_POST['name'])) {
+<h1> SHOP CITY </h1>
 
-            if(strlen($_POST['name'])<=20) {
+        <section class="json">
+            <input id="lecture" type="button" value="SHOW LIST">
+       <ul id="zone">
 
-                echo strtoupper($_POST['name']);
-                strip_tags($_POST['name']);
-            }
-            else {
-                echo "Le prenom ne doit pas dépasser 20 caractères et utilisé que des miniscules";
-            }
-       }
-        ?>
-        !!</p>
 
-      <p>Votre adresse e-mail est
-        <?php
-        if (isset($_POST['email'])) {
+          </ul>
 
-            if (preg_match('/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/', $_POST['email'])) {
+          <script>
 
-                echo strtoupper($_POST['email']);
-                strip_tags($_POST['email']);
+
+          $.getJSON('list.json',function(data){
+
+            $.each(data,function(index,d){
+
+              $('#zone').append('<li><b>' + d.name + ' </b>: ' + d.city + '</li>' );
+
+           });
+         });
+              $('#zone').hide()
+
+                $('#lecture').on('click', function(){
+                  $(this).toggleClass('active');
+                  $('#zone').slideToggle(400);
+                       });
+
+
+                       function centrerElementAbsolu(element)
+             {
+             	var largeur_fenetre = $(window).width();
+             	var hauteur_fenetre = $(window).height();
+
+             	var haut = (hauteur_fenetre - element.height()) / 2 + $(window).scrollTop();
+             	var gauche = (largeur_fenetre - element.width()) / 2 + $(window).scrollLeft();
+             	element.css({position: 'absolute', top: haut, left: gauche});
              }
-             else {
-                 echo "Format email non adpaté !";
-             }
-        }
 
-        ?>
-         ! </p>
-    </body>
-</html>
+
+
+          </script>
+        </section>
+      <?php include("footer.html"); ?>
