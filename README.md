@@ -1,5 +1,3 @@
-https://htmlpreview.github.io/?https://github.com/bonbers/Dojo-Css-2/blob/master/index.html
-
 # exo3-css
 
 - Coder la structure html et le Css
@@ -9,3 +7,5 @@ https://htmlpreview.github.io/?https://github.com/bonbers/Dojo-Css-2/blob/master
   
 - À partir du code de la maquette réaliser lors du Dojo par l'équipe de julien,
  construire le menu et les pages html qui correspondent aux vues **page2** et **page3** dans le dossier **img**
+
+RAJOUT DONNEES JSON
